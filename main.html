@@ -1,16 +1,155 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping Cart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .block-heading {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #3b99e0;
+    }
+
+    .block-heading p {
+      color: #888;
+      font-size: 14px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .product {
+      padding: 15px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .product img {
+      width: 100px;
+      object-fit: contain;
+    }
+
+    .product .info {
+      padding-left: 20px;
+    }
+
+    .summary {
+      background-color: #f7fbff;
+      border-top: 2px solid #5ea4f3;
+      padding: 30px;
+      border-radius: 5px;
+    }
+
+    .summary h5 {
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .summary .d-flex {
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+      width: 100%;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <div class="container my-5">
+    <div class="block-heading">
+      <h2>Shopping cart</h2>
+      <p>
+        The customer is very important, the customer will be followed by the customer. Now, as an urn, I have no right to be in possession of property.
+      </p>
+    </div>
+    <div class="row">
+      <!-- Left Column: Products -->
+      <div class="col-lg-8">
+        <!-- Product 1 -->
+        <div class="product row align-items-center mb-3">
+          <div class="col-2">
+            <img src="https://via.placeholder.com/100" class="img-fluid" />
+          </div>
+          <div class="col-6 info">
+            <a href="#" class="text-decoration-none text-primary fw-bold">I am very sorry</a>
+            <div>Display: 5 inches</div>
+            <div>RAM: 4GB</div>
+            <div>Memory: 32GB</div>
+          </div>
+          <div class="col-2">Quantity: <input type="number" class="form-control" value="0" /></div>
+          <div class="col-2 fw-bold">$120</div>
+        </div>
 
+        <!-- Product 2 -->
+        <div class="product row align-items-center mb-3">
+          <div class="col-2">
+            <img src="https://via.placeholder.com/100" class="img-fluid" />
+          </div>
+          <div class="col-6 info">
+            <a href="#" class="text-decoration-none text-primary fw-bold">I am very sorry</a>
+            <div>Display: 5 inches</div>
+            <div>RAM: 4GB</div>
+            <div>Memory: 32GB</div>
+          </div>
+          <div class="col-2">Quantity: <input type="number" class="form-control" value="1" /></div>
+          <div class="col-2 fw-bold">$120</div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product row align-items-center mb-3">
+          <div class="col-2">
+            <img src="https://via.placeholder.com/100" class="img-fluid" />
+          </div>
+          <div class="col-6 info">
+            <a href="#" class="text-decoration-none text-primary fw-bold">I am very sorry</a>
+            <div>Display: 5 inches</div>
+            <div>RAM: 4GB</div>
+            <div>Memory: 32GB</div>
+          </div>
+          <div class="col-2">Quantity: <input type="number" class="form-control" value="1" /></div>
+          <div class="col-2 fw-bold">$120</div>
+        </div>
+      </div>
+
+      <!-- Right Column: Summary -->
+      <div class="col-lg-4">
+        <div class="summary shadow-sm">
+          <h5>Summary</h5>
+          <div class="d-flex">
+            <span>Subtotal</span>
+            <span>$360</span>
+          </div>
+          <div class="d-flex">
+            <span>Discount</span>
+            <span>$0</span>
+          </div>
+          <div class="d-flex">
+            <span>Shipping</span>
+            <span>$0</span>
+          </div>
+          <hr />
+          <div class="d-flex fw-bold mb-3">
+            <span>Total</span>
+            <span>$360</span>
+          </div>
+          <button class="btn btn-primary">checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
 </body>
-
 </html>
